@@ -6,7 +6,7 @@ export class CardContainer extends Component {
   render() {
     const { pokemon } = this.props;
     return (
-      <section>
+      <section className='cards-container'>
         {pokemon.length > 0 &&
           pokemon.map((pokemon, index) => {
             return <Card key={index} pokemonInfo={pokemon} />

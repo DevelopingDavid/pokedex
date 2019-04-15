@@ -8,16 +8,18 @@ const Card = ({ pokemonInfo }) => {
     return type;
   });
   return (
-    <article>
+    <article className='card'>
       <h1>{pokemonInfo.name}</h1>
       <img src={pokemonInfo.sprite} alt={pokemonInfo.name} />
       <h1>weight: {pokemonInfo.weight} hectograms</h1>
       <h1>height: {pokemonInfo.height} decimetres</h1>
-      {
-        types.map(type => {
-          return <Type key={type} type={type}/>
-        })
-      }
+      <div className='types-container'>
+        {
+          types.map(type => {
+            return <Type key={type} type={type}/>
+          })
+        }
+      </div>
     </article>
   )
 }

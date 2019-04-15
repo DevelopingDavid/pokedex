@@ -1,12 +1,26 @@
+.type-container {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  width: 110px;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 3px;
+  color: #ffffff;
+}
+
 .grass {
+  border-radius: 3px;
   background: #9ACC50;
 }
 
 .poison {
+  border-radius: 3px;
   background: #B97FC8;
 }
 
 .fire {
+  border-radius: 3px;
   background: #FD7D22;
 }
 
@@ -15,10 +29,12 @@
 }
 
 .water {
+  border-radius: 3px;
   background: #4592C3;
 }
 
 .bug {
+  border-radius: 3px;
   background: #729F3E;
 }
 
@@ -27,6 +43,7 @@
 }
 
 .electric {
+  border-radius: 3px;
   background: #EED535;
 }
 
@@ -35,38 +52,47 @@
 }
 
 .fairy {
+  border-radius: 3px;
   background: #FDB9E9;
 }
 
 .fighting {
+  border-radius: 3px;
   background: #D46722;
 }
 
 .psychic {
+  border-radius: 3px;
   background: #F366B9;
 }
 
 .ground {
+  border-radius: 3px;
   background: #A38B20;
 }
 
 .rock {
+  border-radius: 3px;
   background: #A38B20;
 }
 
 .steel {
+  border-radius: 3px;
   background: #9FB7B7;
 }
 
 .ice {
+  border-radius: 3px;
   background: #51C4E7;
 }
 
 .ghost {
+  border-radius: 3px;
   background: #7B62A3;
 }
 
 .dragon {
+  border-radius: 3px;
   background: #F16E58;
 }
 
