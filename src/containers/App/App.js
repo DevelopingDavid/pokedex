@@ -40,7 +40,7 @@ export class App extends Component {
     return (
       <section className="App">
         <header>
-          <h1>Gen 1 Pokedex</h1>
+          <h1>Gen 1 Pokédex</h1>
         </header>
         <CardContainer/>
       </section>
