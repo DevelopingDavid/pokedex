@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { grabAllPokemon } from '../../actions';
+import CardContainer from '../CardContainer/CardContianer';
 
 export class App extends Component {
   componentDidMount () {
@@ -11,7 +12,6 @@ export class App extends Component {
    const response = await fetch(`https://pokeapi.co/api/v2/generation/1/`);
    const data = await response.json();
    const resolved = await this.fetchInfo(data.pokemon_species);
-   console.log(resolved)
    this.cleanData(resolved);
   }
 
@@ -39,6 +39,10 @@ export class App extends Component {
   render() {
     return (
       <section className="App">
+        <header>
+          <h1>Gen 1 Pokedex</h1>
+        </header>
+        <CardContainer/>
       </section>
     );
   }
