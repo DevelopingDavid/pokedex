@@ -2,21 +2,23 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { grabAllPokemon } from '../../actions';
 import CardContainer from '../CardContainer/CardContianer';
+import { Switch, Route } from 'react-router-dom';
+import Popup from '../../components/Popup/Popup';
 
 export class App extends Component {
-  componentDidMount () {
+  componentDidMount() {
     this.fetchGenOne();
   }
 
   fetchGenOne = async () => {
-   const response = await fetch(`https://pokeapi.co/api/v2/generation/1/`);
-   const data = await response.json();
-   const resolved = await this.fetchInfo(data.pokemon_species);
-   this.cleanData(resolved);
+    const response = await fetch(`https://pokeapi.co/api/v2/generation/1/`);
+    const data = await response.json();
+    const resolved = await this.fetchInfo(data.pokemon_species);
+    this.cleanData(resolved);
   }
-
+  
   fetchInfo = async (pokemon) => {
-    let pokemonInfo = pokemon.map( async pokemon => {
+    let pokemonInfo = pokemon.map(async pokemon => {
       const id = pokemon.url.substring(42);
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       const data = await response.json();
@@ -24,16 +26,20 @@ export class App extends Component {
     });
     return Promise.all(pokemonInfo)
   }
-
+  
   cleanData = (pokemon) => {
     let cleaned = pokemon.map(pokemon => ({
       name: pokemon.name,
       sprite: pokemon.sprites.front_default,
       height: pokemon.height,
       weight: pokemon.weight,
-      types: pokemon.types
+      types: pokemon.types,
+      dexNumber: pokemon.id
     }));
-    this.props.grabPokemon(cleaned);
+    const sorted = cleaned.sort((a, b) => {
+     return a.dexNumber - b.dexNumber
+    });
+    this.props.grabPokemon(sorted);
   }
 
   render() {
@@ -42,7 +48,14 @@ export class App extends Component {
         <header>
           <h1>Gen 1 Pokédex</h1>
         </header>
-        <CardContainer/>
+        <Switch>
+          <Route path="/" exact component={CardContainer} />
+          <Route path="/pokemon/:name" render={({ match }) => {
+            const { name } = match.params;
+            const currentPokemon = this.props.pokemon.find(pokemon => pokemon.name === name);
+            return <Popup {...currentPokemon} />
+          }} />
+        </Switch>
       </section>
     );
   }

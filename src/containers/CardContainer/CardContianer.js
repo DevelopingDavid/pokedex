@@ -8,8 +8,8 @@ export class CardContainer extends Component {
     return (
       <section className='cards-container'>
         {pokemon.length > 0 &&
-          pokemon.map((pokemon, index) => {
-            return <Card key={index} pokemonInfo={pokemon} />
+          pokemon.map(pokemon => {
+            return <Card key={pokemon.name} pokemonInfo={pokemon} />
           })}
       </section>
     )
