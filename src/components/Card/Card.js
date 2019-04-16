@@ -11,11 +11,9 @@ const Card = ({ pokemonInfo }) => {
   return (
     <article className='card'>
       <h1>{pokemonInfo.name}</h1>
-      <Link to={`/pokemon/${pokemonInfo.name}`}>
+      <Link to={`/pokemon/${pokemonInfo.dexNumber}`}>
         <img src={pokemonInfo.sprite} alt={pokemonInfo.name} />
       </Link>
-      <h1>weight: {pokemonInfo.weight} hectograms</h1>
-      <h1>height: {pokemonInfo.height} decimetres</h1>
       <div className='types-container'>
         {
           types.map(type => {

@@ -6,6 +6,13 @@ import { Switch, Route } from 'react-router-dom';
 import Popup from '../../components/Popup/Popup';
 
 export class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      loading: true
+    }
+  }
+
   componentDidMount() {
     this.fetchGenOne();
   }
@@ -40,22 +47,29 @@ export class App extends Component {
      return a.dexNumber - b.dexNumber
     });
     this.props.grabPokemon(sorted);
+    this.setState({ loading: false })
   }
 
   render() {
     return (
       <section className="App">
-        <header>
+        {
+          !this.state.loading &&
+          <div>
+          <header>
           <h1>Gen 1 Pokédex</h1>
-        </header>
-        <Switch>
-          <Route path="/" exact component={CardContainer} />
-          <Route path="/pokemon/:name" render={({ match }) => {
-            const { name } = match.params;
-            const currentPokemon = this.props.pokemon.find(pokemon => pokemon.name === name);
-            return <Popup {...currentPokemon} />
-          }} />
-        </Switch>
+          </header>
+          <Switch>
+            <Route path="/" exact component={CardContainer} />
+            <Route path="/pokemon/:id" render={({ match }) => {
+              const { id } = match.params;
+              const currentPokemon = this.props.pokemon.find(pokemon => pokemon.dexNumber == id);
+              return <Popup id={currentPokemon.dexNumber} currentPokemon={currentPokemon} />
+            }} />
+          </Switch>
+          </div>
+        }
+
       </section>
     );
   }
