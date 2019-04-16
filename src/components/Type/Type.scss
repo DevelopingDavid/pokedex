@@ -5,7 +5,7 @@
   width: 110px;
   font-size: 13px;
   text-align: center;
-  margin: 0 3px;
+  margin: 5px 3px 5px 0;
   color: #ffffff;
 }
 
@@ -25,6 +25,7 @@
 }
 
 .flying {
+  border-radius: 3px;
   background: #BDB9B8;
 }
 
@@ -39,6 +40,7 @@
 }
 
 .normal {
+  border-radius: 3px;
   background: #A3ACAE;
 }
 
@@ -48,6 +50,7 @@
 }
 
 .ground {
+  border-radius: 3px;
   background: #AB9841;
 }
 

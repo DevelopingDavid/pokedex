@@ -4,6 +4,7 @@ import { grabAllPokemon } from '../../actions';
 import CardContainer from '../CardContainer/CardContianer';
 import { Switch, Route } from 'react-router-dom';
 import Popup from '../../components/Popup/Popup';
+import logo from '../../images/logo.png';
 
 export class App extends Component {
   constructor() {
@@ -21,7 +22,6 @@ export class App extends Component {
     const response = await fetch(`https://pokeapi.co/api/v2/generation/1/`);
     const data = await response.json();
     const resolved = await this.fetchInfo(data.pokemon_species);
-    console.log('in')
     this.cleanData(resolved);
   }
   
@@ -54,23 +54,22 @@ export class App extends Component {
   render() {
     return (
       <section className="App">
+          <header>
+          <img className='logo' src={logo} alt='logo'/>
+          </header>
         {
           !this.state.loading &&
           <div>
-          <header>
-          <h1>Gen 1 Pokédex</h1>
-          </header>
-          <Switch>
-            <Route path="/" exact component={CardContainer} />
-            <Route path="/pokemon/:id" render={({ match }) => {
-              const { id } = match.params;
-              const currentPokemon = this.props.pokemon.find(pokemon => pokemon.dexNumber == id);
-              return <Popup id={currentPokemon.dexNumber} currentPokemon={currentPokemon} />
-            }} />
-          </Switch>
+            <Switch>
+              <Route path="/" exact component={CardContainer} />
+              <Route path="/pokemon/:id" render={({ match }) => {
+                const { id } = match.params;
+                const currentPokemon = this.props.pokemon.find(pokemon => pokemon.dexNumber === parseInt(id));
+                return <Popup id={currentPokemon.dexNumber} currentPokemon={currentPokemon} />
+              }} />
+            </Switch>
           </div>
         }
-
       </section>
     );
   }

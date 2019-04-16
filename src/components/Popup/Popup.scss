@@ -1,0 +1,48 @@
+.popup-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.popup-card {
+  font-family: "Flexo-Medium",arial,sans-serif;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  width: 800px;
+  background: #FFFFFF;
+}
+
+.sprite-image {
+  width: 300px;
+  height: auto;
+  background: #F2F2F2;
+  border-radius: 12px;
+  background-position:-1500px -1350px;
+  margin: 15px;
+}
+
+.popup-pokemon{
+  div {
+    display: flex;
+    h1 {
+      margin: 10px 0 0 18px;
+    }
+  }
+}
+
+.popup-info {
+  width: 500px;
+  h1 {
+    margin: 25px 5px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+    &:hover {
+      color: #D8000F;
+    }
+  }
+}

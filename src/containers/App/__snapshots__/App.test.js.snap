@@ -3,5 +3,13 @@
 exports[`App should match snapshot 1`] = `
 <section
   className="App"
-/>
+>
+  <header>
+    <img
+      alt="logo"
+      className="logo"
+      src="logo.png"
+    />
+  </header>
+</section>
 `;

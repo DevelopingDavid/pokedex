@@ -4,23 +4,23 @@ exports[`Card should match snapShot 1`] = `
 <article
   className="card"
 >
-  <h1>
-    charmander
-  </h1>
   <Link
     to="/pokemon/undefined"
   >
     <img
       alt="charmander"
     />
+    <h1>
+      charmander
+    </h1>
+    <div
+      className="types-container"
+    >
+      <Type
+        key="fire"
+        type="fire"
+      />
+    </div>
   </Link>
-  <div
-    className="types-container"
-  >
-    <Type
-      key="fire"
-      type="fire"
-    />
-  </div>
 </article>
 `;

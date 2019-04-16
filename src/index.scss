@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
 }
-
+@import './containers/App/App';
 @import './containers/CardContainer/CardContainer';
 @import './components/Card/Card';
 @import './components/Type/Type';
+@import './components/Popup/Popup';
