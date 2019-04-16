@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardContainer should match Snapshot 1`] = `
+<section
+  className="cards-container"
+>
+  <Card
+    key="charmander"
+    pokemonInfo={
+      Object {
+        "name": "charmander",
+        "types": Array [
+          Object {
+            "slot": 2,
+            "type": Object {
+              "name": "fire",
+            },
+          },
+        ],
+      }
+    }
+  />
+</section>
+`;

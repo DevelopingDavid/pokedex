@@ -21,6 +21,7 @@ export class App extends Component {
     const response = await fetch(`https://pokeapi.co/api/v2/generation/1/`);
     const data = await response.json();
     const resolved = await this.fetchInfo(data.pokemon_species);
+    console.log('in')
     this.cleanData(resolved);
   }
   
