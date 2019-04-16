@@ -44,13 +44,17 @@ export class App extends Component {
       types: pokemon.types,
       dexNumber: pokemon.id
     }));
-    const sorted = cleaned.sort((a, b) => {
-     return a.dexNumber - b.dexNumber
-    });
+    let sorted = this.sortData(cleaned);
     this.props.grabPokemon(sorted);
     this.setState({ loading: false })
   }
 
+  sortData = (pokemon) => {
+    return pokemon.sort((a, b) => {
+      return a.dexNumber - b.dexNumber
+    });
+  }
+  
   render() {
     return (
       <section className="App">

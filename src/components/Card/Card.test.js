@@ -15,7 +15,7 @@ describe('Card', () => {
     )
   });
 
-  it('should match snapShot', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
