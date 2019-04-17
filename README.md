@@ -10,10 +10,6 @@ Pokedex was a solo project to show our knowledge in react-router and redux, This
 
 <img src="" alt="Pokedex photo">
 
-Creating a new note             |  Deleting a note
-:-------------------------:|:-------------------------:
-<img src="" alt="Pokedex gif">  |  <img src="src/media/deleteList.gif" alt="deleting a note">
-
 ## Getting Started:
 
 These instructions will get a copy of the project up and running on your local machine for usage and testing purposes.
