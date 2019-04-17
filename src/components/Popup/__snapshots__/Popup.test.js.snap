@@ -3,5 +3,17 @@
 exports[`Popup should match snapshot 1`] = `
 <article
   className="popup-container"
-/>
+>
+  <div
+    className="loader-container"
+  >
+    <img
+      alt="loader"
+      src="loader.gif"
+    />
+    <h1>
+      loading...
+    </h1>
+  </div>
+</article>
 `;

@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Popup from '../../components/Popup/Popup';
 import logo from '../../images/logo.png';
 import loader from '../../images/loader.gif';
+import PropTypes from 'prop-types';
 
 export class App extends Component {
   constructor() {
@@ -95,3 +96,8 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+App.propTypes = {
+  pokemon: PropTypes.array,
+  grabPokemon: PropTypes.func
+}

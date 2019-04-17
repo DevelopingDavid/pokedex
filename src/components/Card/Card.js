@@ -1,6 +1,7 @@
 import React from 'react';
 import Type from '../Type/Type';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Card = ({ pokemonInfo }) => {
   const types = pokemonInfo.types.map(t => {
@@ -23,6 +24,10 @@ const Card = ({ pokemonInfo }) => {
       </Link>
     </article>
   )
+}
+
+Card.propTypes = {
+  pokemonInfo: PropTypes.object
 }
 
 export default Card;

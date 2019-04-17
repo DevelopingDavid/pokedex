@@ -11,5 +11,16 @@ exports[`App should match snapshot 1`] = `
       src="logo.png"
     />
   </header>
+  <div
+    className="loader-container"
+  >
+    <img
+      alt="loader"
+      src="loader.gif"
+    />
+    <h1>
+      loading...
+    </h1>
+  </div>
 </section>
 `;

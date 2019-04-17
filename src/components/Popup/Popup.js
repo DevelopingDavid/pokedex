@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import loader from '../../images/loader.gif';
+import PropTypes from 'prop-types';
 export default class Popup extends Component {
   constructor(props) {
     super(props);
@@ -69,3 +70,8 @@ export default class Popup extends Component {
     )
   }
 };
+
+Popup.propTypes = {
+  currentPokemon: PropTypes.object,
+  extraDetails: PropTypes.object
+}

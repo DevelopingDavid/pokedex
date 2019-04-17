@@ -1,30 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should match snapShot 1`] = `
-<article
-  className="card"
->
-  <Link
-    to="/pokemon/undefined"
-  >
-    <img
-      alt="charmander"
-    />
-    <h1>
-      charmander
-    </h1>
-    <div
-      className="types-container"
-    >
-      <Type
-        key="fire"
-        type="fire"
-      />
-    </div>
-  </Link>
-</article>
-`;
-
 exports[`Card should match snapshot 1`] = `
 <article
   className="card"

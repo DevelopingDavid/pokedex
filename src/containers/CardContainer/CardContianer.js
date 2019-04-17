@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
+import PropTypes from 'prop-types';
 
 export class CardContainer extends Component {
   render() {
@@ -21,3 +22,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(CardContainer);
+
+CardContainer.propTypes = {
+  Pokemon: PropTypes.array
+}

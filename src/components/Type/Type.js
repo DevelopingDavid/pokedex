@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 const Type = ({type}) => {
   return (
     <div className='type-container'>
@@ -9,3 +9,7 @@ const Type = ({type}) => {
 };
 
 export default Type;
+
+Type.propTypes = {
+  type: PropTypes.string
+}
