@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import loader from '../../images/loader.gif';
 export default class Popup extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +40,12 @@ export default class Popup extends Component {
 
     return (
       <article className='popup-container'>
+        {this.state.loading &&
+          <div className='loader-container'>
+            <img src={loader} alt='loader' />
+            <h1>loading...</h1>
+          </div>
+        }
         {!this.state.loading &&
           <div className='popup-card'>
             <div className='popup-pokemon'>

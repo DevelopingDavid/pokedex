@@ -5,6 +5,7 @@ import CardContainer from '../CardContainer/CardContianer';
 import { Switch, Route } from 'react-router-dom';
 import Popup from '../../components/Popup/Popup';
 import logo from '../../images/logo.png';
+import loader from '../../images/loader.gif';
 
 export class App extends Component {
   constructor() {
@@ -24,7 +25,7 @@ export class App extends Component {
     const resolved = await this.fetchInfo(data.pokemon_species);
     this.cleanData(resolved);
   }
-  
+
   fetchInfo = async (pokemon) => {
     let pokemonInfo = pokemon.map(async pokemon => {
       const id = pokemon.url.substring(42);
@@ -34,7 +35,7 @@ export class App extends Component {
     });
     return Promise.all(pokemonInfo)
   }
-  
+
   cleanData = (pokemon) => {
     let cleaned = pokemon.map(pokemon => ({
       name: pokemon.name,
@@ -54,13 +55,19 @@ export class App extends Component {
       return a.dexNumber - b.dexNumber
     });
   }
-  
+
   render() {
     return (
       <section className="App">
-          <header>
-          <img className='logo' src={logo} alt='logo'/>
-          </header>
+        <header>
+          <img className='logo' src={logo} alt='logo' />
+        </header>
+        {this.state.loading &&
+          <div className='loader-container'>
+            <img src={loader} alt='loader' />
+            <h1>loading...</h1>
+          </div>
+        }
         {
           !this.state.loading &&
           <div>

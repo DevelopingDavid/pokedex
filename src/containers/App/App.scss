@@ -1,10 +1,19 @@
 .App {
   background: #313131;
   min-height: 850px;
-}
-
-.logo {
+ }
+ .logo {
   width: 20%;
   height: auto;
   margin: 10px;
-}
+ }
+ .loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+   color: white;
+   font-size: 2.5rem;
+  }
+ }
