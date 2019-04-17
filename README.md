@@ -22,11 +22,8 @@ cd into directory and run npm install: ```$ npm install```
 launch in your browser: ```$ npm start ```
 
 ## Future Development and Extensions Notes:
-
-- Fully keyboard navigation on note (ie. ability to press `Enter` to get to next line) \
-- Add drag and drop functionality for notes \
-- Add ability to search notes \
-- Add ability to upload files or pictures to notes
+- Add ability to Add favorite Pokemon and view favorites
+- Add ability to search Pokemon through Name and Type
 
 ### Technologies Used
 TrapperKeeper was built using: 
