@@ -8,7 +8,7 @@ Pokedex was a solo project to show our knowledge in react-router and redux, This
 
 ## Preview:
 
-<img src="" alt="Pokedex photo">
+<img src="src/images/pokedex.gif" alt="Pokedex photo">
 
 ## Getting Started:
 
