@@ -15,7 +15,7 @@ Pokedex was a solo project to show our knowledge in react-router and redux, This
 These instructions will get a copy of the project up and running on your local machine for usage and testing purposes.
 
 ### Frontend
-clone down the repo: ```$ git clone https://github.com/MRKrog/TrapperKeeper```
+clone down the repo: ```$ git clone git@github.com:DevelopingDavid/pokedex.git```
 
 cd into directory and run npm install: ```$ npm install```
 
