@@ -48,4 +48,4 @@ This project was assigned by David Whitaker and Christie Lynam
 *@ Turing School of Software and Design, Denver, CO.*
 
 ---
-**[Back to top](https://github.com/DevelopingDavid/pokedex/edit/master/README.md)**
+**[Back to top](https://github.com/DevelopingDavid/pokedex)**
