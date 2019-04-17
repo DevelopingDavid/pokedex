@@ -13,12 +13,19 @@ describe('Popup', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
-      <Popup id={1} currentPokemon={mockpokemon}/>
+      <Popup id={1} currentPokemon={mockpokemon} />
     )
   });
 
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual({
+      extraDetails: {},
+      loading: true
+    })
   });
 
   it('should call upon grabDetails on component`DidMount', () => {

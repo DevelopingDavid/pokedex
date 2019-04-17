@@ -23,6 +23,12 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual({
+      loading: true
+    });
+  });
+
   it('should call upon fetchGenOne on componentDidMount', () => {
     const spy = jest.spyOn(instance, 'fetchGenOne');
 
